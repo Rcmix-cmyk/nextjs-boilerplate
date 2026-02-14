@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 Meses de Amor ❤️</title>
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Arial',sans-serif;}
+body{background:#111;color:white;overflow-x:hidden;scroll-behavior:smooth;}
+
+/* VÍDEO DE FUNDO */
+#videoBG{
+    position:fixed; top:0; left:0;
+    width:100%; height:100%;
+    object-fit:cover; z-index:-2; opacity:0; transition:opacity 2s;
+}
+
+/* OVERLAY */
+.overlay{
+    position:fixed; width:100%; height:100%;
+    background:rgba(0,0,0,0.4); z-index:-1; opacity:0; transition:opacity 2s;
+}
+
+/* SEÇÕES PRINCIPAIS */
+.section{
+    min-height:100vh; padding:80px 20px;
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center; text-align:center;
+    transition:opacity 1s;
+    opacity:0;
+}
+
+/* CORES VIVAS */
+.section:nth-child(odd){background:rgba(255,0,150,0.2);}
+.section:nth-child(even){background:rgba(0,200,255,0.2);}
+
+/* TEXTO */
+.section h1{font-size:3em; animation:fadeIn 2s;}
+.section p{opacity:0; animation:fadeText 2s forwards; animation-delay:1s;}
+
+/* ANIMAÇÃO TEXTO */
+@keyframes fadeIn{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeText{from{opacity:0;}to{opacity:1;}}
+
+/* IMAGENS RESPONSIVAS */
+.gallery{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;
+}
+.gallery img{
+    width:100%; max-width:200px; height:auto; border-radius:20px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+.gallery img:hover{transform:scale(1.05); box-shadow:0 0 20px rgba(255,255,255,0.8);}
+
+/* CHUVA DE CORAÇÕES */
+.heart{position:fixed; top:-50px; font-size:30px; color:#ff4d88; animation:fall linear infinite;}
+@keyframes fall{to{transform:translateY(110vh);}}
+
+/* BOTÕES */
+button{
+    padding:15px 30px; font-size:1em;
+    border:none; border-radius:30px; background:#ff4d88; color:white; cursor:pointer;
+    z-index:10;
+    transition:transform 0.3s, background 0.3s;
+}
+button:hover{transform:scale(1.05); background:#ff1a66;}
+
+/* TELA INICIAL */
+#telaInicio{
+    position:fixed; top:0; left:0; width:100%; height:100%;
+    background:#111; display:flex; justify-content:center; align-items:center;
+    flex-direction:column; z-index:20;
+}
+
+#telaInicio h1{font-size:3em; margin-bottom:30px; color:#ff4d88; animation:pulse 2s infinite alternate;}
+@keyframes pulse{from{transform:scale(1);}to{transform:scale(1.1);}}
+
+/* BOTÃO MÚSICA */
+#playMusic{display:none; position:fixed; top:20px; right:20px;}
+
+/* MEDIA QUERIES RESPONSIVAS */
+@media (max-width:1024px){
+    .section h1{font-size:2.5em;}
+    .section p{font-size:1.2em;}
+    .gallery img{max-width:250px;}
+    button{padding:12px 25px;font-size:0.9em;}
+}
+@media (max-width:768px){
+    .section h1{font-size:2.2em;}
+    .section p{font-size:1.1em;}
+    .gallery img{max-width:200px;}
+    #playMusic{padding:10px 20px; font-size:0.9em;}
+}
+@media (max-width:480px){
+    .section h1{font-size:1.8em;}
+    .section p{font-size:1em;}
+    .gallery img{max-width:150px;}
+    #playMusic{padding:8px 18px; font-size:0.8em;}
+}
+</style>
+</head>
+<body>
+
+<!-- TELA INICIAL -->
+<div id="telaInicio">
+    <h1>Nosso Amor ❤️</h1>
+    <button onclick="iniciarSite()">Iniciar</button>
+</div>
+
+<!-- VÍDEO DE FUNDO -->
+<video id="videoBG" autoplay muted loop>
+    <source src="v1.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<!-- BOTÃO MÚSICA -->
+<button id="playMusic">🎵 Tocar Música</button>
+<audio id="musica" loop>
+    <source src="music/Tems - Me & U (Official Video) [1JltlSJH5bY].mp3" type="audio/mpeg">
+</audio>
+
+<!-- SEÇÕES -->
+<div class="section">
+    <h1>Feliz 3 Meses ❤️</h1>
+    <p>Três meses vivendo os melhores momentos da minha vida ao seu lado 💕</p>
+    <p>Feliz aniversário de namoro, meu amor! Hoje celebramos mais um mês juntos, e não poderia estar mais feliz por ter você ao meu lado. Cada dia com voce  é uma dádiva, e nosso amor só cresce a cada momento que passamos juntos.
+São meses de risadas,de gracinha ,cumplicidade e carinho, construindo memórias que levarei sempre no coração,meu coração onde voce sempre esteve e sempre estara oro a Deus pra isso  . Você trouxe luz à minha vida e me mostrou a verdadeira essência do amor,o que e´ ser amado e amar alguem
+Agradeço por todo o apoio, paciencia e compreensão e por fazer de cada dia um dia  especial. Tenho certeza de que nosso futuro está repleto de surpresas maravilhosas, e mal posso esperar para vivê-las ao seu lado.
+Que este seja apenas o começo de uma história de amor que durará para sempre. Te amo imensamente e estou ansioso para o que o futuro nos reserva. Parabéns para nós dois! ❤️🎉</p>
+    <div class="gallery">
+        <img src="img/1.jpeg" alt="Nosso momento 1">
+        <img src="img/2.jpeg" alt="Nosso momento 1">
+        <img src="img/3.jpeg" alt="Nosso momento 1">
+    </div>
+</div>
+
+<div class="section">
+    <h1>Você é minha alegria ✨</h1>
+    <p>Cada sorriso seu ilumina meu mundo e me faz feliz💖Há 3 meses sendo a melhor escolha que eu poderia ter feito pra minha vida! Dizem que é pouco tempo
+        , mas sinto que a nossa conexão vai muito além disso,como se o destino estivesse dizendo que era pra se a gente     .
+         Você me completa de tantas formas que eu não consigo imaginar outra pessoa do meu lado.
+          É, tinha que ser você. E eu espero celebrar ainda muitos outros meses e anos de nós dois! Te amo, meu amor!</p>
+    <div class="gallery">
+        <img src="img/4.jpeg" alt="Nosso momento 1">
+       <img src="img/5.jpeg" alt="Nosso momento 1">
+    </div>
+</div>
+
+<div class="section">
+    <h1>Que venham muitos meses juntos 💍</h1>
+    <p>Esse feitiço que você jogou em mim está funcionado muito bem.
+         A cada mês fico mais encantada e mais apaixonada
+          por você! Sou capaz de tudo por você e 
+         por nós dois,faria de tudo pra esta ao seu lado .</p>
+    <p>Eu te amo infinitamente 💕</p>
+</div>
+
+<script>
+/* INICIAR SITE */
+function iniciarSite(){
+    document.getElementById("telaInicio").style.display="none";
+    document.getElementById("videoBG").style.opacity=1;
+    document.querySelector(".overlay").style.opacity=1;
+    document.querySelectorAll(".section").forEach(s=>s.style.opacity=1);
+    document.getElementById("playMusic").style.display="block";
+}
+
+/* MÚSICA */
+document.getElementById("playMusic").addEventListener("click", ()=>{
+    const audio = document.getElementById("musica");
+    audio.play();
+    document.getElementById("playMusic").style.display="none";
+});
+
+/* CHUVA DE CORAÇÕES */
+function criarCoracao(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = ["❤️","💖","💕","💘"][Math.floor(Math.random()*4)];
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.animationDuration = (Math.random()*3 + 2)+"s";
+    document.body.appendChild(heart);
+    setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(criarCoracao,200);
+</script>
+
+</body>
+</html>
